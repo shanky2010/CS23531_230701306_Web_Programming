@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Material Inventory Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h3>Building Material Inventory</h3>
+      <form id="materialForm" novalidate>
+        <div class="field">
+          <label for="materialName">Material Name:</label>
+          <input type="text" id="materialName" placeholder="Enter material name" />
+        </div>
+        <div class="field">
+          <label for="category">Material Category:</label>
+          <select id="category">
+            <option value="Wood">Wood</option>
+            <option value="Cement">Cement</option>
+            <option value="Steel">Steel</option>
+            <option value="Bricks">Bricks</option>
+            <option value="Glass">Glass</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" placeholder="Enter quantity">
+        </div>
+        <div class="field">
+          <label for="supplierName">Supplier Name:</label>
+          <input type="text" id="supplierName" placeholder="Enter supplier name">
+        </div>
+        <div class="field">
+          <label for="costPerUnit">Cost Per Unit (RS):</label>
+          <input type="number" id="costPerUnit" placeholder="Enter cost per unit" step="0.01">
+        </div>
+        <button id="addMaterialBtn" type="button" style="background-color: rgb(76, 175, 80);">Submit Material</button>
+        <span id="error-message" class="error"></span>
+      </form>
+      <h4 class="subheading">Material List:</h4>
+      <div class="table-wrap">
+        <table id="materialTable">
+          <thead>
+            <tr>
+              <th>Material Name</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th>Supplier</th>
+              <th>Cost Per Unit (RS)</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+      <section class="summary">
+        <h4 class="subheading">Inventory Summary:</h4>
+        <p>Total Products: <span id="totalProducts">0</span></p>
+        <p>Most Expensive Product: <span id="mostExpensive">None</span></p>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
